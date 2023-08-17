@@ -11,6 +11,11 @@
 		497656812A890E28005D47FA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497656802A890E28005D47FA /* ContentView.swift */; };
 		497656832A890E2A005D47FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497656822A890E2A005D47FA /* Assets.xcassets */; };
 		497656862A890E2A005D47FA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 497656852A890E2A005D47FA /* Preview Assets.xcassets */; };
+		497656902A8E14F5005D47FA /* player.json in Resources */ = {isa = PBXBuildFile; fileRef = 4976568C2A8E14F5005D47FA /* player.json */; };
+		497656912A8E14F5005D47FA /* brand.json in Resources */ = {isa = PBXBuildFile; fileRef = 4976568D2A8E14F5005D47FA /* brand.json */; };
+		497656922A8E14F5005D47FA /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = 4976568E2A8E14F5005D47FA /* product.json */; };
+		497656932A8E14F5005D47FA /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = 4976568F2A8E14F5005D47FA /* category.json */; };
+		4976569E2A8E16E3005D47FA /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976569D2A8E16E3005D47FA /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,12 @@
 		497656802A890E28005D47FA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		497656822A890E2A005D47FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		497656852A890E2A005D47FA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4976568C2A8E14F5005D47FA /* player.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = player.json; sourceTree = "<group>"; };
+		4976568D2A8E14F5005D47FA /* brand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand.json; sourceTree = "<group>"; };
+		4976568E2A8E14F5005D47FA /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
+		4976568F2A8E14F5005D47FA /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		497656952A8E155E005D47FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4976569D2A8E16E3005D47FA /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +62,13 @@
 		4976567D2A890E28005D47FA /* SwiftUI-TouchdownECommerce-Sample */ = {
 			isa = PBXGroup;
 			children = (
-				4976567E2A890E28005D47FA /* SwiftUI_TouchdownECommerce_SampleApp.swift */,
-				497656802A890E28005D47FA /* ContentView.swift */,
+				497656962A8E1637005D47FA /* App */,
+				497656972A8E164C005D47FA /* View */,
+				497656942A8E1509005D47FA /* Data */,
+				4976569A2A8E1669005D47FA /* Model */,
+				4976569B2A8E1676005D47FA /* Extension */,
+				4976569C2A8E1684005D47FA /* Utility */,
+				497656952A8E155E005D47FA /* Info.plist */,
 				497656822A890E2A005D47FA /* Assets.xcassets */,
 				497656842A890E2A005D47FA /* Preview Content */,
 			);
@@ -65,6 +81,71 @@
 				497656852A890E2A005D47FA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		497656942A8E1509005D47FA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4976568D2A8E14F5005D47FA /* brand.json */,
+				4976568F2A8E14F5005D47FA /* category.json */,
+				4976568C2A8E14F5005D47FA /* player.json */,
+				4976568E2A8E14F5005D47FA /* product.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		497656962A8E1637005D47FA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				4976567E2A890E28005D47FA /* SwiftUI_TouchdownECommerce_SampleApp.swift */,
+				497656802A890E28005D47FA /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		497656972A8E164C005D47FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				497656992A8E165C005D47FA /* Detail */,
+				497656982A8E1655005D47FA /* Home */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		497656982A8E1655005D47FA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		497656992A8E165C005D47FA /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		4976569A2A8E1669005D47FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4976569B2A8E1676005D47FA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4976569C2A8E1684005D47FA /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				4976569D2A8E16E3005D47FA /* Constant.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +206,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				497656902A8E14F5005D47FA /* player.json in Resources */,
+				497656912A8E14F5005D47FA /* brand.json in Resources */,
 				497656862A890E2A005D47FA /* Preview Assets.xcassets in Resources */,
+				497656932A8E14F5005D47FA /* category.json in Resources */,
 				497656832A890E2A005D47FA /* Assets.xcassets in Resources */,
+				497656922A8E14F5005D47FA /* product.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +224,7 @@
 			files = (
 				497656812A890E28005D47FA /* ContentView.swift in Sources */,
 				4976567F2A890E28005D47FA /* SwiftUI_TouchdownECommerce_SampleApp.swift in Sources */,
+				4976569E2A8E16E3005D47FA /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,11 +355,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-TouchdownECommerce-Sample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-TouchdownECommerce-Sample/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,11 +383,11 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI-TouchdownECommerce-Sample/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-TouchdownECommerce-Sample/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
