@@ -22,12 +22,19 @@ struct ContentView: View {
                 
                 ScrollView(.vertical, showsIndicators: false, content: {
                     VStack(spacing: 0) {
-                        
+                        FeaturedTabView()
+                            .padding(.vertical, 20)
+                            .frame(height: 300)
+                        CategoryGridView()
+                        TitleView(title: "Helmets")
+                        FooterView()
+                            .padding(.horizontal)
+                         
                     } //: VStack
+                    
                 }) //: ScrollView
                 
-                FooterView()
-                    .padding(.horizontal)
+                
             } //: VStack
             .background(colorBackground.ignoresSafeArea(.all, edges: .all))
         } //: ZStack
