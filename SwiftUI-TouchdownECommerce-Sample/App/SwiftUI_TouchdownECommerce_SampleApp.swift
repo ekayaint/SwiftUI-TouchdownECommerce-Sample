@@ -12,6 +12,7 @@ struct SwiftUI_TouchdownECommerce_SampleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(Shop())
         }
     }
 }

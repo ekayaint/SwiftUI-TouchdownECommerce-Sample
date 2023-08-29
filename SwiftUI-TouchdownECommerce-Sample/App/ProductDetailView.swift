@@ -16,14 +16,39 @@ struct ProductDetailView: View {
                 .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top)
             // Header
             HeaderDetailView()
+                .padding(.horizontal)
             // Detail Top Part
+            TopPartDetailView()
+                .padding(.horizontal)
+                .zIndex(1)
             // Detail Bottom Part
-            // Ratings + Sizes
-            // Description
-            // Quantity + Favorite
-            // Add to Cart
-            Spacer()
+            VStack(alignment: .center, spacing: 0){
+                // Ratings + Sizes
+                RatingSizesDetailView()
+                    .padding(.top, -20)
+                    .padding(.bottom, 10)
+                // Description
+                ScrollView(.vertical, showsIndicators: false){
+                    Text(sampleProduct.description)
+                        .font(.system(.body, design: .rounded))
+                        .foregroundColor(.gray)
+                        .multilineTextAlignment(.leading)
+                } //: ScrollView
+                // Quantity + Favorite
+                QuantityFavoriteDetailView()
+                    .padding(.vertical, 10)
+                // Add to Cart
+                AddtoCartDetailView()
+                    .padding(.bottom, 20)
+            } //: VStack
+            .padding(.horizontal)
+            .background(
+                Color.white
+                    .clipShape(CustomShape())
+                    .padding(.top, -105)
+            )
         } //: VStack
+        .zIndex(0)
         .ignoresSafeArea(.all, edges: .all)
         .background(
         Color(
